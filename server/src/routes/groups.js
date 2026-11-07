@@ -12,7 +12,7 @@ router.post('/', authenticateToken, async (req, res, next) => {
     await connection.beginTransaction();
 
     const [groupResult] = await connection.query(
-      'INSERT INTO Groups (group_name, created_by) VALUES (?, ?)',
+      `INSERT INTO Groups (group_name, created_by) VALUES (?, ?)`,
       [group_name, req.user.userId]
     );
 
