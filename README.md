@@ -1,4 +1,4 @@
-# split-sathi
+# splitwise_campus
 expense management
 
 
