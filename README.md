@@ -1,2 +1,66 @@
 # split-sathi
 expense management
+
+
+split-sathi/
+├── README.md
+├── .gitignore
+│
+├── database/
+│   ├── schema.sql                  
+│   └── seed.sql                    
+│
+├── server/
+│   ├── package.json                
+│   ├── .env.example                
+│   ├── .gitignore                  
+│   └── src/
+│       ├── server.js               
+│       ├── app.js                   (new routes get added here)
+│       ├── config/
+│       │   └── db.js               
+│       ├── middleware/
+│       │   ├── auth.js             
+│       │   └── errorHandler.js
+│       ├── routes/
+│       │   ├── auth.js            
+│       │   ├── groups.js
+│       │   ├── expenses.js
+│       │   ├── balances.js
+│       │   ├── settlements.js
+│       │   ├── budgets.js
+│       │   └── analytics.js
+│       └── services/
+│           ├── splitService.js     (equal / exact / percentage maths)
+│           └── balanceService.js   (who owes whom, simplified debts)
+│
+└── client/
+    ├── package.json
+    ├── index.html
+    ├── vite.config.js
+    └── src/
+        ├── main.jsx
+        ├── App.jsx
+        ├── api/
+        │   └── client.js           (fetch wrapper + token)
+        ├── context/
+        │   └── AuthContext.jsx
+        ├── components/
+        │   ├── Navbar.jsx
+        │   ├── ProtectedRoute.jsx
+        │   ├── ExpenseForm.jsx
+        │   ├── ExpenseList.jsx
+        │   ├── BalanceSummary.jsx
+        │   └── SettleUpModal.jsx
+        ├── pages/
+        │   ├── Login.jsx
+        │   ├── Register.jsx
+        │   ├── Dashboard.jsx
+        │   ├── GroupDetail.jsx
+        │   ├── Analytics.jsx
+        │   └── Budget.jsx
+        └── styles/
+            └── index.css
+
+
+
